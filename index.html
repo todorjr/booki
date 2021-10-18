@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+
+    <!-- Raleway font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Booki styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Booki - Trouvez votre hébergement pour des vacances de rêve</title>
+  </head>
+  <body>
+    <!-- En-tête -->
+    <header class="header">
+      <!-- Logo de Booki -->
+      <picture class="header__logo">
+        <source media="(min-width: 768px)" srcset="./images/logo/Booki.png">
+        <img src="./images/logo/Booki_x3.png" alt="Booki">
+      </picture>
+
+      <!-- Navigation -->
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__list-item">
+            <a href="#hebergements">Hébergements</a>
+          </li>
+          <li class="header__nav__list-item">
+            <a href="#activites">Activités</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="content">
+      <!-- Titre + Section de recherche -->
+      <section>
+        <h1 class="h1">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+
+        <!-- recherche -->
+        <form action="index.html" method="GET">
+          <div class="search-input">
+            <label for="search" class="search-input__icon">
+              i
+            </label>
+            <div class="search-input__text">
+              <input type="text" id="search" name="search" placeholder="Ex : Paris">
+            </div>
+            <button type="submit" class="search-input__button">
+              Rechercher
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
