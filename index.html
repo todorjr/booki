@@ -48,23 +48,75 @@
     <main class="content">
       <!-- Titre + Section de recherche -->
       <section>
-        <h1 class="h1">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <header>
+          <h1 class="h1">Trouvez votre hébergement pour des vacances de rêve</h1>
+        </header>
         <p>En plein centre ville ou en pleine nature</p>
 
-        <!-- recherche -->
-        <form action="index.html" method="GET">
+        <!-- formulaire de recherche -->
+        <form action="index.html" method="GET" role="search">
           <div class="search-input">
+            <!-- label -->
             <label for="search" class="search-input__icon">
               <i class="fas fa-map-marker-alt"></i>
             </label>
+            <!-- zone de texte -->
             <div class="search-input__text">
-              <input type="text" id="search" name="search" placeholder="Ex : Paris">
+              <input type="search" id="search" name="search" placeholder="Ex : Paris">
             </div>
+            <!-- bouton d'envoi -->
             <button type="submit" class="search-input__button">
-              Rechercher
+              <span class="search-input__button__text">Rechercher</span>
+              <i class="fas fa-search search-input__button__icon"></i>
             </button>
           </div>
         </form>
+
+        <!-- Filtres -->
+        <article class="filters">
+          <header>
+            <h2 class="filters__title">Filtres</h2>
+          </header>
+
+          <ul class="filters__list">
+            <!-- Économique -->
+            <li>
+              <a href="#" class="filters__list__item" title="Économique">
+                <span class="filters__list__item__icon">
+                  <i class="fas fa-search"></i>
+                </span>
+                <span>Économique</span>
+              </a>
+            </li>
+            <!-- Familial -->
+            <li>
+              <a href="#" class="filters__list__item" title="Familial">
+                <span class="filters__list__item__icon">
+                  <i class="fas fa-child"></i>
+                </span>
+                <span>Familial</span>
+              </a>
+            </li>
+            <!-- Romantique -->
+            <li>
+              <a href="#" class="filters__list__item" title="Romantique">
+                <span class="filters__list__item__icon">
+                  <i class="fas fa-heart"></i>
+                </span>
+                <span>Romantique</span>
+              </a>
+            </li>
+            <!-- Animaux autorisés -->
+            <li>
+              <a href="#" class="filters__list__item" title="Animaux autorisés">
+                <span class="filters__list__item__icon">
+                  <i class="fas fa-dog"></i>
+                </span>
+                <span>Animaux autorisés</span>
+              </a>
+            </li>
+          </ul>
+        </article>
       </section>
     </main>
   </body>

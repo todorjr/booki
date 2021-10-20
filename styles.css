@@ -1,6 +1,6 @@
 /* STYLES COMMUNS */
 body {
-  max-width: 1438px; /* taille max pour centrer le contenu sur les grands écrans */
+  max-width: 1380px; /* taille max pour centrer le contenu sur les grands écrans */
   margin: 0 auto;
 
   font-family: 'Raleway', sans-serif;
@@ -81,6 +81,7 @@ a {
   align-items: stretch;
 
   margin-top: 16px;
+  max-width: 420px;
 }
 
 .search-input__icon {
@@ -94,11 +95,13 @@ a {
   font-size: 20px;
   border-radius: 15px 0 0 15px;
   background-color: #F2F2F2;
+
+  cursor: pointer;
 }
 
 .search-input__text {
+  flex: 1 1 100%;
   position: relative;
-  width: 250px;
   height: 50px;
 
   border: 1px solid #F2F2F2;
@@ -131,6 +134,7 @@ a {
 .search-input__button {
   display: block;
   padding: 0 16px;
+  flex: 1 0 50px;
 
   font-size: 18px;
   font-weight: 600;
@@ -141,7 +145,64 @@ a {
   background-color: #0065FC;
   cursor: pointer;
 }
+
+.search-input__button__icon {
+  display: none;
+}
 /* RECHERCHE */
+
+/* FILTRES */
+.filters {
+  display: flex;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+.filters__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.filters__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px -10px -5px 35px;
+}
+
+.filters__list__item {
+  display: block;
+  position: relative;
+  margin: 5px 10px;
+  padding: 0 20px 0 70px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 46px;
+  white-space: nowrap;
+
+  color: #000 !important;
+  border: 2px solid #F2F2F2;
+  border-radius: 25px;
+}
+
+.filters__list__item__icon {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #DEEBFF;
+  border-radius: 50%;
+}
+
+.filters__list__item__icon > i {
+  color: #0065FC;
+  line-height: 50px;
+}
+/* FILTRES */
 
 @media (max-width: 767.98px) {
   body {
@@ -191,6 +252,26 @@ a {
 
   .search-input {
     margin-top: 32px;
+    max-width: 100%;
+  }
+
+  .search-input__button__text {
+    display: none;
+  }
+
+  .search-input__button__icon {
+    display: inline-block;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters__list {
+    margin-left: 0;
+
+    margin-top: 12px;
   }
 
 }
