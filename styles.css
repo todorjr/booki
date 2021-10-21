@@ -101,6 +101,7 @@ a {
 
 .search-input__text {
   flex: 1 1 100%;
+  z-index: 0;
   position: relative;
   height: 50px;
 
@@ -133,6 +134,8 @@ a {
 }
 
 .search-input__button {
+  z-index: 1;
+  position: relative;
   display: block;
   padding: 0 16px;
   flex: 1 0 50px;
@@ -303,6 +306,15 @@ a {
   .search-input {
     margin-top: 32px;
     max-width: 100%;
+  }
+
+  .search-input__text > input {
+    padding-right: 37px;
+  }
+
+  .search-input__button {
+    margin-left: -15px;
+    border-radius: 15px;
   }
 
   .search-input__button__text {
