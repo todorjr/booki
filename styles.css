@@ -1,6 +1,6 @@
 /* STYLES COMMUNS */
 body {
-  max-width: 1380px; /* taille max pour centrer le contenu sur les grands écrans */
+  max-width: 1378px; /* taille max pour centrer le contenu sur les grands écrans */
   margin: 0 auto;
 
   font-family: 'Raleway', sans-serif;
@@ -72,7 +72,7 @@ a {
 
 .content {
   margin-top: 45px;
-  padding: 0 20px;
+  padding: 0 20px 60px 20px;
 }
 
 /* RECHERCHE */
@@ -115,6 +115,7 @@ a {
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   padding: 0 22px;
 
   font-size: 18px;
@@ -154,12 +155,13 @@ a {
 /* FILTRES */
 .filters {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   margin-top: 30px;
 }
 
 .filters__title {
+  line-height: 50px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -174,7 +176,7 @@ a {
   display: block;
   position: relative;
   margin: 5px 10px;
-  padding: 0 20px 0 70px;
+  padding: 0 20px 0 60px;
 
   font-size: 18px;
   font-weight: 700;
@@ -184,9 +186,12 @@ a {
   color: #000 !important;
   border: 2px solid #F2F2F2;
   border-radius: 25px;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 .filters__list__item__icon {
+  z-index: 0;
   position: absolute;
   top: -2px;
   left: -2px;
@@ -195,18 +200,62 @@ a {
   font-size: 18px;
   text-align: center;
   background-color: #DEEBFF;
-  border-radius: 50%;
+  border-radius: 25px;
+  transition: width ease-out 150ms;
+}
+
+.filters__list__item:hover .filters__list__item__icon {
+  width: calc(100% + 4px);
+  right: -2px;
+  transition-timing-function: ease-in;
 }
 
 .filters__list__item__icon > i {
   color: #0065FC;
   line-height: 50px;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.filters__list__item__text {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+}
+
+.hint {
+  display: inline-flex;
+}
+
+.hint > i {
+  flex: 0 0 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  color: #0065FC;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #F2F2F2;
+  border-radius: 50%;
+}
+
+.hint > p {
+  flex: 1;
+  display: inline-block;
+  padding-left: 12px;
+  line-height: 24px;
+}
+
+.filters + .hint {
+  margin-top: 35px;
 }
 /* FILTRES */
 
 @media (max-width: 767.98px) {
   body {
-    padding-top: 20px;
+    padding-top: 24px;
   }
 
   .header {
@@ -218,6 +267,7 @@ a {
   }
 
   .header__logo {
+    height: 50px;
     margin-left: 0;
   }
 
@@ -269,9 +319,13 @@ a {
   }
 
   .filters__list {
-    margin-left: 0;
+    margin-left: -10px;
 
     margin-top: 12px;
+  }
+
+  .filters__title {
+    line-height: normal;
   }
 
 }
