@@ -54,7 +54,7 @@
         <p>En plein centre ville ou en pleine nature</p>
 
         <!-- formulaire de recherche -->
-        <form action="index.html" method="GET" role="search">
+        <form action="index.html" method="GET" role="search" id="search">
           <div class="search-input">
             <!-- label -->
             <label for="search" class="search-input__icon">
@@ -73,7 +73,7 @@
         </form>
 
         <!-- Filtres -->
-        <article>
+        <article id="filters">
           <div class="filters">
             <header>
               <h2 class="filters__title">Filtres</h2>
@@ -125,6 +125,20 @@
           </div>
         </article>
       </section>
+
+      <div class="hotels-list">
+        <section id="hebergements" class="hotels-list__item">
+          <header>
+            <h2 class="hotels-list__item__title">Hébergements à Marseille</h2>
+          </header>
+        </section>
+
+        <section id="populaires" class="hotels-list__item">
+          <header>
+            <h22 class="hotels-list__item__title">Les plus populaires</h2>
+          </header>
+        </section>
+      </div>
     </main>
   </body>
 </html>
