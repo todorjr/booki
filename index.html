@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Avec Booki, trouvez votre hébergement pour des vacances de rêve !">
+
     <!-- reset css -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" >
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/solid.min.css" >
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/solid.min.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/solid.min.css">
 
     <!-- Raleway font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap">
 
     <!-- Booki styles -->
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
 
     <title>Booki - Trouvez votre hébergement pour des vacances de rêve</title>
@@ -54,7 +61,7 @@
         <p>En plein centre ville ou en pleine nature</p>
 
         <!-- formulaire de recherche -->
-        <form action="index.html" method="GET" role="search" id="search">
+        <form action="index.html" method="GET" role="search">
           <div class="search-input">
             <!-- label -->
             <label for="search" class="search-input__icon">
@@ -65,7 +72,7 @@
               <input type="search" id="search" name="search" placeholder="Paris, France">
             </div>
             <!-- bouton d'envoi -->
-            <button type="submit" class="search-input__button">
+            <button type="submit" class="search-input__button" aria-label="Rechercher">
               <span class="search-input__button__text">Rechercher</span>
               <i class="fas fa-search search-input__button__icon"></i>
             </button>
