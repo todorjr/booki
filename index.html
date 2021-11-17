@@ -31,7 +31,7 @@
   </head>
   <body>
     <!-- En-tête -->
-    <header class="header">
+    <header class="header container">
       <!-- Logo de Booki -->
       <picture class="header__logo">
         <source media="(min-width: 768px)" srcset="./images/logo/Booki.png">
@@ -52,13 +52,14 @@
     </header>
 
     <!-- Contenu principal -->
-    <main class="content">
+    <main class="content container">
       <!-- Titre + Section de recherche -->
       <section>
         <header>
           <h1 class="h1">Trouvez votre hébergement pour des vacances de rêve</h1>
         </header>
-        <p>En plein centre ville ou en pleine nature</p>
+
+        <p class="mt-1">En plein centre ville ou en pleine nature</p>
 
         <!-- formulaire de recherche -->
         <form action="index.html" method="GET" role="search">
@@ -134,11 +135,13 @@
       </section>
 
       <div class="cards-group">
+        <!-- Hébergements -->
         <section id="hebergements" class="cards-group__item">
           <header>
-            <h2 class="cards-group__item__title">Hébergements à Marseille</h2>
+            <h2 class="h2">Hébergements à Marseille</h2>
           </header>
 
+          <!-- Résultats -->
           <ul class="cards-list">
             <!-- Auberge La Cannebière -->
             <li class="cards-list__item">
@@ -297,13 +300,20 @@
               </a>
             </li>
           </ul>
+
+          <button role="button" type="button" class="btn-more" title="Afficher plus de résultats">Afficher plus</button>
         </section>
 
+        <!-- Les plus populaires -->
         <section id="populaires" class="cards-group__item">
           <header>
-            <h2 class="cards-group__item__title">Les plus populaires</h2>
+            <h2 class="h2 h2--icon">
+              <span>Les plus populaires</span>
+              <i class="fas fa-chart-line"></i>
+            </h2>
           </header>
 
+          <!-- Résultats -->
           <ul class="cards-list">
             <!-- Hôtel Le soleil du matin -->
             <li class="cards-list__item cards-list__item--paysage">
@@ -386,6 +396,136 @@
           </ul>
         </section>
       </div>
+
+      <!-- Activités à Marseille -->
+      <section id="activites">
+        <header>
+          <h2 class="h2">Activités à Marseille</h2>
+        </header>
+
+        <ul id="grid-activities" class="cards-list grid-activities">
+          <!-- Vieux Port -->
+          <li class="cards-list__item cards-list__item--jumbo">
+            <a href="#" title="Visiter le Vieux Port de Marseille" class="cards-list__item__wrapper">
+              <article class="cards-list__item__container">
+                <div class="cards-list__item__cover-wrapper">
+                  <picture class="cards-list__item__cover cards-list__item__cover--vieux-port">
+                    <source media="(min-width: 992px)" srcset="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
+                    <source media="(min-width: 768px)" srcset="./images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
+                    <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Le Vieux Port de Marseille" width="370">
+                  </picture>
+                </div>
+
+                <div class="cards-list__item__content">
+                  <header class="cards-list__item__header">
+                    <h3 class="cards-list__item__title">Vieux Port</h3>
+                  </header>
+                </div>
+              </article>
+            </a>
+          </li>
+          <!-- Fort de Pomègues -->
+          <li class="cards-list__item cards-list__item--jumbo">
+            <a href="#" title="Visiter le Fort de Pomègues" class="cards-list__item__wrapper">
+              <article class="cards-list__item__container">
+                <div class="cards-list__item__cover-wrapper">
+                  <picture class="cards-list__item__cover cards-list__item__cover--fort">
+                    <source media="(min-width: 992px)" srcset="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
+                    <source media="(min-width: 768px)" srcset="./images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
+                    <img src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Le Fort de Pomègues" width="370">
+                  </picture>
+                </div>
+
+                <div class="cards-list__item__content">
+                  <header class="cards-list__item__header">
+                    <h3 class="cards-list__item__title">Fort de Pomègues</h3>
+                  </header>
+                </div>
+              </article>
+            </a>
+          </li>
+          <!-- Îles du Frioul -->
+          <li class="cards-list__item cards-list__item--jumbo">
+            <a href="#" title="Visiter les Îles du Frioul" class="cards-list__item__wrapper">
+              <article class="cards-list__item__container">
+                <div class="cards-list__item__cover-wrapper">
+                  <picture class="cards-list__item__cover cards-list__item__cover--frioul">
+                    <source media="(min-width: 992px)" srcset="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
+                    <source media="(min-width: 768px)" srcset="./images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
+                    <img src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Les Îles du Frioul vues depuis la sortie du Vieux Port de Marseille" width="370">
+                  </picture>
+                </div>
+
+                <div class="cards-list__item__content">
+                  <header class="cards-list__item__header">
+                    <h3 class="cards-list__item__title">Îles du Frioul</h3>
+                  </header>
+                </div>
+              </article>
+            </a>
+          </li>
+          <!-- Parc National des Calanques -->
+          <li class="cards-list__item cards-list__item--jumbo">
+            <a href="#" title="Visiter le Parc National des Calanques" class="cards-list__item__wrapper">
+              <article class="cards-list__item__container">
+                <div class="cards-list__item__cover-wrapper">
+                  <picture class="cards-list__item__cover">
+                    <source media="(min-width: 992px)" srcset="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                    <source media="(min-width: 768px)" srcset="./images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                    <img src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Prise de vue du Parc National des Calanques" width="370">
+                  </picture>
+                </div>
+
+                <div class="cards-list__item__content">
+                  <header class="cards-list__item__header">
+                    <h3 class="cards-list__item__title">Parc National des Calanques</h3>
+                  </header>
+                </div>
+              </article>
+            </a>
+          </li>
+          <!-- Notre-Dame-de-la-Garde -->
+          <li class="cards-list__item cards-list__item--jumbo">
+            <a href="#" title="Visiter Notre-Dame-de-la-Garde" class="cards-list__item__wrapper">
+              <article class="cards-list__item__container">
+                <div class="cards-list__item__cover-wrapper">
+                  <picture class="cards-list__item__cover cards-list__item__cover--notre-dame">
+                    <source media="(min-width: 992px)" srcset="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg">
+                    <source media="(min-width: 768px)" srcset="./images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg">
+                    <img src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Vue de Notre-Dame-de-la-Garde depuis le centre ville de Marseille" width="370">
+                  </picture>
+                </div>
+
+                <div class="cards-list__item__content">
+                  <header class="cards-list__item__header">
+                    <h3 class="cards-list__item__title">Notre-Dame-de-la-Garde</h3>
+                  </header>
+                </div>
+              </article>
+            </a>
+          </li>
+          <!-- Parc Longchamp -->
+          <li class="cards-list__item cards-list__item--jumbo">
+            <a href="#" title="Visiter le Parc Longchamp" class="cards-list__item__wrapper">
+              <article class="cards-list__item__container">
+                <div class="cards-list__item__cover-wrapper">
+                  <picture class="cards-list__item__cover">
+                    <source media="(min-width: 992px)" srcset="./images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
+                    <source media="(min-width: 768px)" srcset="./images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
+                    <img src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Le Parc Longchamp" width="370">
+                  </picture>
+                </div>
+
+                <div class="cards-list__item__content">
+                  <header class="cards-list__item__header">
+                    <h3 class="cards-list__item__title">Parc Longchamp</h3>
+                  </header>
+                </div>
+              </article>
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
